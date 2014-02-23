@@ -11,7 +11,8 @@
 - Создайте массивы $toyota и $opel аналогичные массиву $bmw.
 - Заполните массив $toyota значениями: "Carina", 130, 4, "2007"
 - Заполните массив $opel значениями: "Corsa", 140, 5, "2007"		
-?>*/
+*/
+error_reporting(E_ALL);
 
 $bmw=array(
 		"model"=>"X5",
@@ -25,26 +26,25 @@ $toyota=array(
 		"model"=>"Carina",
 		"speed"=> 130,
 		"doors"=>4,
-		"year"=>"2007<	<2<1",
+		"year"=>"2007",
 
 );
-print_r($toyota);
 
-$toyota=array(
-		"model"=>"X5",
-		"speed"=> 120,
+$opel=array(
+		"model"=>"Corsa",
+		"speed"=> 140,
 		"doors"=>5,
-		"year"=>"2006",
+		"year"=>"2007",
 
 );
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
 <head>
 	<title>Массивы</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
 	<h1>Массивы</h1>
@@ -53,6 +53,41 @@ $toyota=array(
 	ЗАДАНИЕ 2
 	- Выведите значения всех трёх массивов в виде: name - model - speed - doors -year,  например: bmw - 120 - 5 - 2006*/
 	
+	$car="";							//строка с полным название автомобиля
+
+	foreach ($bmw as $key=>$value) {
+		
+		$car.=$value;
+		if($key!="year"){
+			$car.=" - ";			
+		}	
+	}
+
+	echo $car."<br>";
+
+	$car="";
+
+	foreach ($toyota as $key=>$value) {
+		
+		$car.=$value;
+		if($key!="year"){
+			$car.=" - ";			
+		}	
+	}
+
+	echo $car."<br>";
+
+	$car="";
+
+	foreach ($opel as $key=>$value) {
+		
+		$car.=$value;
+		if($key!="year"){
+			$car.=" - ";			
+		}	
+	}
+
+	echo $car."<br>";
 	?>
 </body>
 </html>
