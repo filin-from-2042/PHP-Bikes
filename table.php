@@ -8,57 +8,48 @@
 </head>
 <body> 
 	<h1>Таблица умножения</h1>
-	<?php
+<?php
+/*
+	Функция  getTable отрисовывает таблицу в зависимости от входящих параметров: 
+	$cols - кол-во столбцов
+	$rows - кол-во строк
+	$color - цвет заголовков
+
+	Без параметров выведет таблицу 10х10 желтого цвета
+*/ 
+function getTable($cols=10,$rows=10,$colors='yellow'){
 
 
+	echo "<table style=\"border:1px solid;margin:auto;\">";
 
+	for ($curr_row=1;$curr_row<=$rows;$curr_row++){
+		
+		echo '<tr>';
+		
+			for ($curr_col=1;$curr_col<=$cols;$curr_col++){
+				$d=$curr_col*$curr_row;
+				if ($curr_row==1 or $curr_col==1) {
+					echo "<th style=\"background-color:$colors\">".$d.'</th>'; 
+				}else{
+					echo '<td style="border:1px solid">'.$d."</td>";	
+				}			
 
-
-function getTable($cols,$rows,$colors){
-
-
-echo "<table border='1' align='center'>";
-
-for ($i=1;$i<=$rows;$i++){
-	
-	echo '<tr>';
-	
-		for ($b=1;$b<=$rows;$b++){
-			$d=$b*$i;
-			if ($i==1 or $b==1) {
-				echo "<th bgcolor=\"$colors\">".$d.'</th>'; 
-				}
-			else	{
-				echo '<td>'.$d.'</td>';	
-							}
-				
-
+			}
+		
+		echo '</tr>';	
+		
 		}
-	
-	echo '</tr>';	
-	
-	}
 
-echo '</table>';
+	echo '</table>';
 
 
 }
 
 
-getTable(20,20,'blue');
-getTable('yellow');
-getTable();
+getTable(15,20,'red'); //15x20 красного цвета
 
-	/*
-	ЗАДАНИЕ 3
-	- Отрисуйте таблицу умножения вызывая функцию getTable() с различными параметрами
-	*/
-	/*
-	ЗАДАНИЕ 5
-	- Отрисуйте таблицу умножения вызывая функцию getTable() без параметров
-	- Отрисуйте таблицу умножения вызывая функцию getTable() с одним параметром
-	- Отрисуйте таблицу умножения вызывая функцию getTable() с двумя параметрами
-	*/
-	?>
+getTable(); //10х10 желтая
+
+?>
 </body>
 </html>

@@ -2,26 +2,22 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
 <head>
-	<title>Цикл while</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+	<title>Р¦РёРєР» while</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
-	<h1>Цикл while</h1>
+	<h1>Р¦РёРєР» while</h1>
 	<?php
-$i=1;
-while ($i<=50){
-echo $i."<br>";
-$i+=2;	
-
-
-}
-
-
-
-	/*
-	ЗАДАНИЕ 1
-	- Используя цикл while выведите в столбик Нечётные числа от 1 до 50
+/*
+	Р—РђР”РђРќРР• 1
+	- РСЃРїРѕР»СЊР·СѓСЏ С†РёРєР» while РІС‹РІРµРґРёС‚Рµ РІ СЃС‚РѕР»Р±РёРє РќРµС‡С‘С‚РЅС‹Рµ С‡РёСЃР»Р° РѕС‚ 1 РґРѕ 50
 	*/
-	?>
+
+	$i=1;
+	while ($i<=50){
+		echo $i."<br>";
+		$i+=2;	
+	}
+?>
 </body>
 </html>
