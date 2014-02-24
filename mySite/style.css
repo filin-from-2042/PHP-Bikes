@@ -1,0 +1,18 @@
+#calForm {
+position: absolute;
+top: 50%;
+left: 50%;
+margin-left: -150px;
+margin-top: -90px;
+width: 300px;
+height: 180px;
+
+text-align: center;
+font-family: Tahoma, Verdana, Arial, sans-serif;
+font-size: 12px;
+
+border: 1px solid;
+# experiments only for Firefox and Safari/Webkit
+border-radius: 7px;
+-webkit-box-shadow: #888 3px 3px 3px;
+}

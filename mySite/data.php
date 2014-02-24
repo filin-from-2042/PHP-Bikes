@@ -1,0 +1,1 @@
+<?php		$leftmenu=array(				"Home"=>"index.php", 				"Page1"=>"index.php?pageid=page1", 				"Page2"=>"index.php?pageid=page2", 				"Page3"=>"index.php?pageid=page3", 				"Table"=>"index.php?pageid=table",				"Calculator"=>"index.php?pageid=calc"				);	$topmenu=array(							"About"=>"#",							"Contacts"=>"#",							"News"=>"#"				);?>
