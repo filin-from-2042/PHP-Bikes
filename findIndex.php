@@ -4,12 +4,12 @@
 */        
         
         $A = array(1,6,8,4,3,8);
-        $value=6;
+        $value=4;						//искомое значение
         
         function findIndex($A,$value)
         {
                 
-                $finded=array();
+                $finded=array();                                //массив будет содержать найденные индексы
                 foreach($A as $key=>$element){
                         if($element==$value){
                                 $finded[]=$key;
@@ -20,7 +20,7 @@
         }
         
         foreach(findIndex($A,$value) as $index){
-                echo $index.'<br>';
+                echo $index.'<br>';                             
         };
 ?>
 

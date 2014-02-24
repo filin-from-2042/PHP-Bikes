@@ -6,9 +6,9 @@
 */
     class Gallery
     {
-        public $colums;         // count colums table
-        public $conf_file;       //name of file, that content name's images
-        public $names;  //array of names images
+        public $colums;          // кол-во выводимых изображений
+        public $conf_file;       //имя файла конфигурации с именами и описанием изображений
+        public $names;           //массив с именами и описанием изображений
         
         public function __construct($conf_file, $colums=4)
         {
@@ -31,7 +31,7 @@
         public function renderGallery()
         {
                 echo '<tr>';
-                $count_colums=1;
+                $count_colums=1;                    //счетчик отрисованных колонок с изображениями
                 foreach($this->names as $value){
                          if($count_colums >  0 and 
                             $count_colums <= $this->colums){

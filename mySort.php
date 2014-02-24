@@ -12,8 +12,8 @@
               {  
                 $length=count($arr);
                 for($j=2;$j<=$length;$j++){
-                        $currentElement=$arr[$j];
-                        $i=$j-1;
+                        $currentElement=$arr[$j];       //текущий элемент
+                        $i=$j-1;                        //соседний слева
                         while($i>0 and $arr[$i]>$currentElement){
                                 $arr[$i+1]=$arr[$i];
                                 $i--;
@@ -33,8 +33,8 @@
               {  
                 $length=count($arr);
                 for($j=2;$j<=$length;$j++){
-                        $currentElement=$arr[$j];
-                        $i=$j-1;
+                        $currentElement=$arr[$j];       //текущий элемент
+                        $i=$j-1;                        //соседний справа
                         while($i>0 and $arr[$i]<$currentElement){
                                 $arr[$i+1]=$arr[$i];
                                 $i--;
@@ -49,5 +49,4 @@
         
         var_dump(incSort($A));
         var_dump(descSort($A));
-        var_dump(mySort($str));
 ?>

@@ -7,9 +7,4 @@ $lastSim=$postMaxSize{strlen($postMaxSize)-1};//M
 	case 'K': $postMaxSize*=1024;
 	echo $postMaxSize;
 endswitch;
-	
-
-
-
-
 ?>
