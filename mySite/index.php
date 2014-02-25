@@ -15,22 +15,25 @@ require_once "data.php";
 
 <table width="100%" border=1>
 <tr>
+
+	<!--Шапка сайта-->
 	<td colspan="2" align="center">
 	<?php
 	include_once "top.inc.php";
 	?>
-		<!--Шапка сайта-->
+		
 	
 	</td>
 </tr>
 
 <tr>
+	<!--Меню-->
 	<td width="20%" valign="top">
 		<?php
 			include_once "menu.inc.php";
 		?>
 		
-		<!--Меню-->
+		
 		
 	</td>
 	<td>
@@ -39,7 +42,6 @@ require_once "data.php";
 	<?php
 	$pageid='';
 	if (!empty($_GET['pageid']))
-		//if (empty($_POST['var1'])){
 			$pageid=clearData($_GET['pageid']);
 			switch ($pageid){
 			case "page1": include "page1.php";break;
@@ -49,10 +51,6 @@ require_once "data.php";
 			case "calc": include "calc.php";break;
 			default: echo "Добро пожаловать на главную страницу";
 			} 
-		//} else {
-		//include "calc2.php";
-		//}
-	
 
 
 
@@ -68,13 +66,13 @@ require_once "data.php";
 
 </tr>
 <tr>
-
+	<!--Нижняя страницы-->
 	<td colspan="2" align="center"> 
 	
 		<?php
 		include_once "bottom.inc.php"; 
 		?>
-		<!--Нижняя страницы-->
+		
 	</td>
 
 </tr>
